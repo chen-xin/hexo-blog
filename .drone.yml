@@ -1,0 +1,22 @@
+pipeline:
+  build:
+    image: node:8-alpine
+    environment:
+      - npm_config_registry=https://registry.npm.taobao.org/
+      - SQLITE3_BINARY_SITE=http://npm.taobao.org/mirrors/sqlite3
+      - ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron
+      - SASS_BINARY_SITE=http://npm.taobao.org/mirrors/node-sass
+      - phantomjs_cdnurl=https://npm.taobao.org/mirrors/phantomjs/
+      - CHROMEDRIVER_CDNURL=http://npm.taobao.org/mirrors/chromedriver
+      - SELENIUM_CDNURL=http://npm.taobao.org/mirrorss/selenium
+    commands:
+      - npm install
+      - npm run build
+  publish:
+    image: chenxinaz/sshrsync
+    environment:
+      - ROOT_PASSWORD=foofoo
+    commands:
+      - mkdir -p ~/.ssh
+      - ssh-keyscan rsync > ~/.ssh/known_hosts
+      - sshpass -p $${ROOT_PASSWORD} rsync -avz public/  root@rsync:/www/nginx/html/

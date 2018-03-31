@@ -1,0 +1,6 @@
+node_modules/
+public/
+/db.json
+yarn.lock
+yarn-error.log
+*.swp

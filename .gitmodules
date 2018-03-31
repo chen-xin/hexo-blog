@@ -1,0 +1,3 @@
+[submodule "themes/Azurewind"]
+	path = themes/Azurewind
+	url = https://github.com/chen-xin/hexo-theme-azurewind.git

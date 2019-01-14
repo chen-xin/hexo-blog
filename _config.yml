@@ -8,8 +8,8 @@ neat_html:
 logo: img/logo1-min.png
 
 # Site
-title: Where has time gone
-subtitle: Azurewind
+title: Azurewind's notes
+subtitle: -*-
 description: 
 author: Azurewind
 language: zh-cn
@@ -78,5 +78,6 @@ theme: Azurewind
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/chen-xin/chen-xin.github.io.git
 

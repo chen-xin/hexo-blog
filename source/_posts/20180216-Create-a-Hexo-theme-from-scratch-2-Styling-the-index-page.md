@@ -58,7 +58,7 @@ Then style the post:
 ====================
 
 
-```
+```stylus
 .post
   padding: 20px 40px
   .post-header
@@ -97,7 +97,7 @@ We shall try the default *landscape* theme's highlight style: `cp ~/hexo-blog/th
 
 Oops, hexo-server complains some missing variables. We have to add the required vars in our *az.styl*, before the `@import highlight` line, I preffered to add them to top of the file:
 
-```
+```stylus
 font-mono = mono
 font-size = 16px
 line-height = 1.8em
@@ -109,7 +109,7 @@ Now we highlight works, but also ugly scrollbars in code block. Styling `.highli
 The sider
 ===========
 
-```
+```stylus
 #sider
   background-color: Whitesmoke
   position: fixed

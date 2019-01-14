@@ -35,5 +35,33 @@ sudo dpkg -i sogou
 git config --global user.email "foo@bar.com"
 git config --global user.name "foo bar"
 git config --global credential.helper store
+
+## create ~/.vimrc
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+## start vim then :PluginInstall
+
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer --java-completer --build-dir ~/下载/ycm-build
+cd ~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/tern_runtime
+yarn  # or npm install
+
+# create ~/.tern-config
+
+copy ssh files
+
+
+create .npmrc, .pip/pip.conf
+
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/
+conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/
+
 ```
 

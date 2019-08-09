@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.8.0"
+    "version": "3.9.0"
   },
   "scripts": {
     "start": "cross-env hexo server -p 4001",
     "build": "cross-env hexo generate",
-    "postinstall": "git clone https://git.coding.net/chenxin/hexo-theme-azurewind.git themes/Azurewind"
+    "new": "cross-env hexo new",
+    "'postinstall": "git clone https://git.coding.net/chenxin/hexo-theme-azurewind.git themes/Azurewind"
   },
   "dependencies": {
     "hexo": "^3.2.0",

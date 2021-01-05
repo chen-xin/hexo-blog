@@ -4,3 +4,4 @@ public/
 yarn.lock
 yarn-error.log
 *.swp
+*.md~
